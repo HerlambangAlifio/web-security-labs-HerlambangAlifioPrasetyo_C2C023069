@@ -1,0 +1,99 @@
+/* === style.css (shared site styles) === */
+:root{
+  --bg1: #f8fafc;
+  --accent: #4f46e5;
+  --vuln-red: #b91c1c;
+  --muted: #6b7280;
+  --card-radius: 12px;
+  --maxw: 920px;
+  font-family: Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+
+/* Layout */
+body{
+  background: linear-gradient(180deg,#eef2ff,#fff);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:36px 16px;
+  color:#0b1220;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Main container */
+.container {
+  width:100%;
+  max-width:var(--maxw);
+  background:#ffffff;
+  border-radius:14px;
+  padding:24px;
+  box-shadow: 0 8px 28px rgba(15,23,42,0.06);
+}
+
+/* Headings */
+h1,h2,h3{margin:0 0 12px 0;color:#0b1220}
+.lead{color:var(--muted);font-size:13px}
+
+/* Form card */
+.form {
+  background:#fbfbff;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #eef2ff;
+  margin-bottom:14px;
+}
+
+/* Inputs */
+input[type="file"], input[type="text"], textarea {
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  font-size:14px;
+  margin-bottom:12px;
+  box-sizing:border-box;
+}
+
+/* Buttons */
+button {
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+button:hover { filter:brightness(.95); transform:translateY(-1px); }
+
+/* Vulnerable hint */
+.vuln-hint {
+  background: linear-gradient(90deg, rgba(185,28,28,0.06), rgba(255,255,255,0));
+  border: 1px dashed rgba(185,28,28,0.18);
+  color: var(--vuln-red);
+  padding:10px;
+  border-radius:10px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+/* Note / info */
+.note { color:var(--muted); font-size:13px; margin-top:8px; }
+
+/* Result / message */
+.msg { padding:10px;border-radius:8px;margin-top:8px;font-weight:600; }
+.msg.ok { background:#ecfdf5;color:#065f46;border:1px solid #bbf7d0; }
+.msg.err { background:#fff1f2;color:#7f1d1d;border:1px solid #fecaca; }
+
+/* Links */
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Responsive */
+@media (max-width:640px){
+  body{padding:18px}
+  .container{padding:18px}
+}

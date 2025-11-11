@@ -1,0 +1,100 @@
+/* === style.css (shared site styles + vulnerable helpers) === */
+:root{
+  --bg1: #f8fafc;
+  --accent: #4f46e5;
+  --vuln-red: #b91c1c;
+  --muted: #6b7280;
+  --card-radius: 12px;
+  --maxw: 920px;
+  font-family: Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+
+/* Page layout */
+body{
+  background: linear-gradient(180deg,#eef2ff,#fff);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:36px 16px;
+  color:#0b1220;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Main container */
+.container {
+  width:100%;
+  max-width:var(--maxw);
+  background:#ffffff;
+  border-radius:14px;
+  padding:24px;
+  box-shadow: 0 8px 28px rgba(15,23,42,0.06);
+}
+
+/* Headings */
+h1,h2,h3{margin:0 0 12px 0;color:#0b1220}
+.lead{color:var(--muted);font-size:13px}
+
+/* Vulnerable hint */
+.vuln-hint {
+  background: linear-gradient(90deg, rgba(185,28,28,0.06), rgba(255,255,255,0));
+  border: 1px dashed rgba(185,28,28,0.18);
+  color: var(--vuln-red);
+  padding:10px;
+  border-radius:10px;
+  font-weight:700;
+  margin-bottom:12px;
+  max-width:720px;
+}
+
+/* Invoice detail card */
+.invoice {
+  background: #fbfbff;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #eef2ff;
+  box-shadow: 0 6px 18px rgba(10,15,30,0.03);
+  max-width: 760px;
+}
+
+.invoice .row {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.invoice .label {
+  min-width:120px;
+  font-weight:700;
+  color:var(--muted);
+}
+
+.invoice .value {
+  background: #fff;
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #e6edf8;
+  min-width:200px;
+}
+
+/* Action link */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight:600;
+}
+a:hover { text-decoration: underline; }
+
+/* small note */
+.note { color: var(--muted); font-size:13px; margin-top:10px; }
+
+/* Responsive */
+@media (max-width:640px){
+  body{padding:18px}
+  .container{padding:18px}
+  .invoice .label{min-width:90px}
+}

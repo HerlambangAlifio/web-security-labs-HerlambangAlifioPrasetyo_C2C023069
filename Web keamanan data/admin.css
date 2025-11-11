@@ -1,0 +1,118 @@
+/* ===== style.css ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+h2, h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+a {
+  color: #5563DE;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  background: #f9f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+select, input[type="text"], input[type="number"], input[name="amount"], input[name="description"] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+select:focus, input:focus {
+  border-color: #5563DE;
+  outline: none;
+}
+
+button {
+  background: #5563DE;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #4051B5;
+}
+
+/* Message */
+.msg {
+  color: #28a745;
+  background: #e8f9ee;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #c6e9d2;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Invoice list */
+.invoice-list {
+  display: grid;
+  gap: 10px;
+}
+
+.invoice-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 5px solid #5563DE;
+  padding: 14px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.invoice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.invoice-card span {
+  display: inline-block;
+  min-width: 90px;
+  font-weight: 600;
+  color: #333;
+}
+
+.invoice-card small {
+  color: #6b7280;
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+}

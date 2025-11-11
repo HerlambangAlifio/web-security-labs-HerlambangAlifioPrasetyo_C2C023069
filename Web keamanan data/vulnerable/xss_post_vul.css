@@ -1,0 +1,113 @@
+/* === style.css (additions / vulnerable page helpers) === */
+:root{
+  --bg1: #fef3f3;
+  --accent: #b91c1c; /* darker red for vuln warnings */
+  --primary: #4f46e5;
+  --muted: #6b7280;
+  --card-radius: 12px;
+  --maxw: 920px;
+  font-family: Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Page layout (if not already present in global css) */
+body {
+  margin: 0;
+  padding: 36px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(180deg,#fff,#f7f9fc);
+  color: #0b1220;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(8,15,30,0.06);
+  padding: 26px;
+}
+
+/* Heading */
+h2 { margin-top:0; color:#0b1220; }
+.lead { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+
+/* Form card */
+.form {
+  background: #fbfbff;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #eef2ff;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+textarea { min-height: 140px; resize: vertical; }
+
+/* Buttons */
+button {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover { filter: brightness(.95); transform: translateY(-1px); }
+
+/* Vulnerable hint */
+.vuln-hint {
+  background: linear-gradient(90deg, rgba(185,28,28,0.06), rgba(255,255,255,0));
+  border: 1px dashed rgba(185,28,28,0.2);
+  color: var(--accent);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight:700;
+  margin-bottom: 12px;
+  max-width: 720px;
+}
+
+/* Posts list */
+.posts { margin-top: 18px; }
+.post {
+  border: 1px solid #e6e9ee;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(10,15,30,0.02);
+}
+.post strong { color: var(--primary); display:block; margin-bottom:6px; }
+
+/* Raw content area (highlight to show risk) */
+.raw-content {
+  background: linear-gradient(180deg,#fff7f7,#fff);
+  border: 1px solid rgba(185,28,28,0.06);
+  padding: 12px;
+  border-radius: 8px;
+  color: #2b0b0b;
+}
+
+/* Small helpers */
+.note { color: var(--muted); font-size: 13px; margin-top: 10px; }
+a { color: var(--primary); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Responsive */
+@media (max-width:640px){
+  body { padding: 18px; }
+  .container { padding: 18px; }
+}
